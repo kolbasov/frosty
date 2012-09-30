@@ -19,11 +19,7 @@ define(function() {
 		},
 
 		_help: function() {
-<<<<<<< HEAD
-			return '<div>weather - shows current weather for specified city</div>'
-=======
 			return '<div>weather - shows current weather for specified city</div>';
->>>>>>> gh-pages
 		}
 	};
 });

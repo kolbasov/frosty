@@ -1,11 +1,7 @@
 /**
 * The brain.
 */
-<<<<<<< HEAD
-define(['./clear', './gmail', './help', './instagram', './time', './open', './weather'], function() {
-=======
 define(['./clear', './exit', './gmail', './help', './instagram', './time', './open', './weather'], function() {
->>>>>>> gh-pages
 	modules = arguments;
 
 	function getargs(command) {

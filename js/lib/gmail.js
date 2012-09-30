@@ -14,11 +14,7 @@ define(function() {
 
 		_help: function() {
 			return '<div>gmail - opens <a href="https://gmail.com" target="_blank">gmail</a>' +
-<<<<<<< HEAD
-				' in a new tab</div>'
-=======
 				' in a new tab</div>';
->>>>>>> gh-pages
 		}
 	};
 });

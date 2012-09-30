@@ -12,11 +12,7 @@ define(function() {
 		},
 
 		_help: function() {
-<<<<<<< HEAD
-			return '<div>clear - clears the terminal</div>'
-=======
 			return '<div>clear - clears the terminal</div>';
->>>>>>> gh-pages
 		}
 	};
 });
