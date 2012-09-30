@@ -1,0 +1,38 @@
+body,
+input[type=text] {
+	background: black;
+	color: white;
+	border: 0;
+	font-size: 18px;
+	font-family: Monaco, Consolas, monospace;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=text] {
+	width: 90%;
+
+	padding-left: 11px;
+}
+
+.prompt label {
+	position: relative;
+	left: 15px;
+}
+
+.result {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.result a {
+	color: #00FF00;
+	text-decoration: none;
+}
+
+.result a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
