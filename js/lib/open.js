@@ -12,7 +12,7 @@ define(function() {
 		},
 
 		_help: function() {
-			return '<div>open - opens specified url in a new tab</div>'
+			return '<div>open - opens specified url in a new tab</div>';
 		}
 	};
 });

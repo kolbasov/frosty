@@ -19,7 +19,7 @@ define(function() {
 		},
 
 		_help: function() {
-			return '<div>weather - shows current weather for specified city</div>'
+			return '<div>weather - shows current weather for specified city</div>';
 		}
 	};
 });

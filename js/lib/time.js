@@ -11,7 +11,7 @@ define(function() {
 		},
 
 		_help: function() {
-			return '<div>time - shows current time</div>'
+			return '<div>time - shows current time</div>';
 		}
 	};
 });

@@ -1,7 +1,7 @@
 /**
 * The brain.
 */
-define(['./clear', './gmail', './help', './instagram', './time', './open', './weather'], function() {
+define(['./clear', './exit', './gmail', './help', './instagram', './time', './open', './weather'], function() {
 	modules = arguments;
 
 	function getargs(command) {

@@ -12,7 +12,7 @@ define(function() {
 		},
 
 		_help: function() {
-			return '<div>clear - clears the terminal</div>'
+			return '<div>clear - clears the terminal</div>';
 		}
 	};
 });
