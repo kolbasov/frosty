@@ -11,7 +11,11 @@ define(function() {
 		},
 
 		_help: function() {
+<<<<<<< HEAD
 			return '<div>time - shows current time</div>'
+=======
+			return '<div>time - shows current time</div>';
+>>>>>>> gh-pages
 		}
 	};
 });

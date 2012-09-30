@@ -12,7 +12,11 @@ define(function() {
 		},
 
 		_help: function() {
+<<<<<<< HEAD
 			return '<div>open - opens specified url in a new tab</div>'
+=======
+			return '<div>open - opens specified url in a new tab</div>';
+>>>>>>> gh-pages
 		}
 	};
 });
