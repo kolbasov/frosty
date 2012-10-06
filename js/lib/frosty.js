@@ -2,7 +2,7 @@
 * The brain.
 */
 define(
-	['jquery', 'history', 'clear', 'exit', 'gmail', 'help', 'instagram', 'time', 'open', 'weather'],
+	['jquery', 'history', 'clear', 'exit', 'gmail', 'guid', 'help', 'instagram', 'time', 'open', 'weather'],
 	function($, history) {
 		modules = arguments;
 
@@ -59,7 +59,7 @@ define(
 			getModuleByCommand: function (modules, name) {
 				for(var i = 0; i < modules.length; i++) {
 					var module = modules[i];
-					if(module.hasOwnProperty(name))
+					if(module != $ && module.hasOwnProperty(name))
 						return module;
 				}
 			}
