@@ -7,7 +7,8 @@ define(function() {
 		* Closes the terminal window.
 		*/
 		exit: function(callback) {
-			window.close();
+			window.open('','_self');
+    	window.close();
 		},
 
 		_help: function() {
