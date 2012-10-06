@@ -1,7 +1,7 @@
 /**
 * Clear module.
 */
-define(function() {
+define(['jquery'], function() {
 	return {
 		/**
 		* Clears the terminal.

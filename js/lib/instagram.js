@@ -1,7 +1,7 @@
 /**
 * Instagram module.
 */
-define(function() {
+define(['jquery'], function($) {
 	return {
 		host: 'https://api.instagram.com',
 		/**

@@ -2,16 +2,9 @@ requirejs.config({
 	baseUrl: 'js/lib'
 });
 
-var $;
-var prompt;
-var input;
-var command = '';
-var _frosty;
+require(['jquery', 'frosty', 'history'], function ($, frosty) {
 
-require(['jquery', 'frosty', 'history'],
-	function (jquery, frosty) {
-		$ = jquery;
-		_frosty = frosty;
+		var prompt, input, command = '';
 
 	  $(function() {
 	  	input = $('#input');
@@ -42,30 +35,31 @@ require(['jquery', 'frosty', 'history'],
 			input.keydown(function(event) {
 				if(event.which == 38) {
 	   			event.preventDefault();
-	   			var command = _frosty.prev();
+	   			var command = frosty.prev();
 	   			input.val(command);
 	   		} else if(event.which == 40) {
 	   			event.preventDefault();
-	   			var command = _frosty.next();
+	   			var command = frosty.next();
 	   			input.val(command);
 	   		}
 			})
 		});
+
+	  /**
+		* Handes callback from a module.
+		*/
+		function callback(data, echo) {
+			var terminal = prompt.parent();
+
+			if(typeof echo !== 'undefined' ? echo : true)
+				terminal.append('<div class="result">> ' + command);
+
+			terminal.append('<div class="result">' + data + '</div>');
+			terminal.append(prompt);
+			input.val('');
+			input.focus();
+			window.scrollTo(0, document.body.scrollHeight);
+		}
 	}
 );
 
-/**
-* Handes callback from a module.
-*/
-function callback(data, echo) {
-	var terminal = prompt.parent();
-
-	if(typeof echo !== 'undefined' ? echo : true)
-		terminal.append('<div class="result">> ' + command);
-
-	terminal.append('<div class="result">' + data + '</div>');
-	terminal.append(prompt);
-	input.val('');
-	input.focus();
-	window.scrollTo(0, document.body.scrollHeight);
-}
