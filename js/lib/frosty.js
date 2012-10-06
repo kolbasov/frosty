@@ -1,10 +1,7 @@
 /**
 * The brain.
 */
-define(
-	['jquery', 'history', 'clear', 'exit', 'gmail', 'guid', 'help', 'instagram', 'time', 'open', 'weather'],
-	function($, history) {
-		modules = arguments;
+define(['jquery', 'history', 'modules'], function($, history, modules) {
 
 		function getargs(command) {
 			var args = command.split(' ');
