@@ -12,14 +12,13 @@ define(['require', 'modules'], function(require) {
 			// http://requirejs.org/docs/api.html#circular
 			var modules = require('modules');
 
-			var result = '';
+			var result = [];
 			for(var i = 0; i < modules.length; i++) {
 				var module = modules[i];
-				console.log(module.toString());
 				if(module.hasOwnProperty('_help'))
-					result += module['_help'].apply();
+				    result.push(module['_help'].apply());
 			}
-			callback(result);
+			callback(result.sort().join(''));
 		}
 	};
 });
