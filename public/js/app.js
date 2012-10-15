@@ -1,6 +1,4 @@
-requirejs.config({
-	baseUrl: 'js/lib'
-});
+requirejs.config({ baseUrl: 'js/lib' });
 
 require(['jquery', 'frosty', 'history'], function ($, frosty) {
 
@@ -51,15 +49,16 @@ require(['jquery', 'frosty', 'history'], function ($, frosty) {
 		function callback(data, echo) {
 			var terminal = prompt.parent();
 
+			var user = $('#user').text();
+
 			if(typeof echo !== 'undefined' ? echo : true)
-				terminal.append('<div class="result">> ' + command);
+				terminal.append('<div class="result"><label>' + user + '</label><label>> </label>' + command);
 
 			terminal.append('<div class="result">' + data + '</div>');
 			terminal.append(prompt);
 			input.val('');
-			input.focus();
 			window.scrollTo(0, document.body.scrollHeight);
+			input.focus();
 		}
 	}
 );
-

@@ -4,6 +4,10 @@
 	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
-		"express": "3.x"
+		"express": "3.x",
+		"ejs": "*",
+		"redis": "*",
+		"dbox": "0.5.5",
+		"oauth": "0.9.8"
 	}
 }
