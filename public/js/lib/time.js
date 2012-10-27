@@ -3,6 +3,8 @@
 */
 define(function() {
 	return {
+		name: 'time',
+
 		/**
 		* Shows current time.
 		*/
@@ -10,7 +12,7 @@ define(function() {
 			callback(Date());
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>time - shows current time</div>';
 		}
 	};

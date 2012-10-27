@@ -1,8 +1,11 @@
 requirejs.config({ baseUrl: 'js/lib' });
 
-require(['jquery', 'frosty', 'history'], function ($, frosty) {
+require(['jquery', 'frosty', 'fileupload'], function ($, frosty, fileupload) {
 
 		var prompt, input, command = '';
+
+		frosty.fileupload = fileupload;
+		frosty.fileupload.init(onupload);
 
 	  $(function() {
 	  	input = $('#input');
@@ -25,6 +28,7 @@ require(['jquery', 'frosty', 'history'], function ($, frosty) {
 		    	event.preventDefault();
 		    	command = this.value;
 		    	prompt = $(this).parent();
+		    	console.log(fileupload);
 		    	frosty.process(this.value, callback);
 	   		}
 			});
@@ -54,11 +58,21 @@ require(['jquery', 'frosty', 'history'], function ($, frosty) {
 			if(typeof echo !== 'undefined' ? echo : true)
 				terminal.append('<div class="result"><label>' + user + '</label><label>> </label>' + command);
 
-			terminal.append('<div class="result">' + data + '</div>');
+			if(data)
+				terminal.append('<div class="result">' + data + '</div>');
+
 			terminal.append(prompt);
 			input.val('');
 			window.scrollTo(0, document.body.scrollHeight);
 			input.focus();
+		}
+
+		function onupload(files) {
+			if(files) {
+				console.log(files);
+				var input = $('#input');
+				input.val(input.val() + files[0].name);
+			}
 		}
 	}
 );

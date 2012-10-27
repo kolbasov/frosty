@@ -3,6 +3,7 @@
 */
 define(function() {
 	return {
+		name: 'gmail',
 		/**
 		* Opens gmail in a new tab.
 		*/
@@ -12,7 +13,7 @@ define(function() {
 			callback('<a href="' + url + '">gmail</a>');
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>gmail - opens <a href="https://gmail.com" target="_blank">gmail</a>' +
 				' in a new tab</div>';
 		}

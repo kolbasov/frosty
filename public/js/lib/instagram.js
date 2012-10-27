@@ -3,6 +3,8 @@
 */
 define(['jquery'], function($) {
 	return {
+		name: 'instagram',
+
 		host: 'https://api.instagram.com',
 		/**
 		* Yeah, I know. It's suppose to be a secret :)
@@ -37,7 +39,7 @@ define(['jquery'], function($) {
 			});
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>instagram - shows popular pictures from ' +
 				'<a href="http://instagr.am" target="_blank">instagram</a></div>';
 		}

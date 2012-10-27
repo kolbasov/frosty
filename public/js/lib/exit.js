@@ -3,6 +3,7 @@
 */
 define(function() {
 	return {
+		name: 'exit',
 		/**
 		* Closes the terminal window.
 		*/
@@ -11,7 +12,7 @@ define(function() {
     	window.close();
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>exit - closes the terminal window</div>';
 		}
 	};

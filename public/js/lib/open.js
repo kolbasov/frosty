@@ -3,6 +3,8 @@
 */
 define(function() {
 	return {
+		name: 'open',
+
 		/**
 		* Opens specified url in a new tab.
 		*/
@@ -11,7 +13,7 @@ define(function() {
 			callback('<div>opening ' + url + '</div>');
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>open - opens specified url in a new tab</div>';
 		}
 	};

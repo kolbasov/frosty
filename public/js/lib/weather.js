@@ -3,6 +3,8 @@
 */
 define(function() {
 	return {
+		name: 'weather',
+
 		/**
 		* Shows current weather for specified city.
 		*/
@@ -18,7 +20,7 @@ define(function() {
 			}
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>weather - shows current weather for specified city</div>';
 		}
 	};

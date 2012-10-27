@@ -3,6 +3,7 @@
 */
 define(['jquery'], function() {
 	return {
+		name: 'clear',
 		/**
 		* Clears the terminal.
 		*/
@@ -11,7 +12,7 @@ define(['jquery'], function() {
 			callback('', false);
 		},
 
-		_help: function() {
+		help: function() {
 			return '<div>clear - clears the terminal</div>';
 		}
 	};

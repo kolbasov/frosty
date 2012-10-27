@@ -40,3 +40,18 @@ input[type=text] {
 	text-decoration: underline;
 	cursor: pointer;
 }
+
+.error {
+	color: red;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ul li {
+	margin-right: 10px;
+	display: inline;
+}

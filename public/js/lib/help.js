@@ -3,6 +3,7 @@
 */
 define(['require', 'modules'], function(require) {
 	return {
+		name: 'help',
 		/**
 		* Shows help.
 		*/
@@ -15,8 +16,8 @@ define(['require', 'modules'], function(require) {
 			var result = [];
 			for(var i = 0; i < modules.length; i++) {
 				var module = modules[i];
-				if(module.hasOwnProperty('_help'))
-				    result.push(module['_help'].apply());
+				if(module.hasOwnProperty('help') && module.name != 'help')
+				    result.push(module['help'].apply());
 			}
 			callback(result.sort().join(''));
 		}
