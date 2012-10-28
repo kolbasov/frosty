@@ -4,8 +4,8 @@ require(['jquery', 'frosty', 'fileupload'], function ($, frosty, fileupload) {
 
 		var prompt, input, command = '';
 
-		frosty.fileupload = fileupload;
-		frosty.fileupload.init(onupload);
+		//frosty.fileupload = fileupload;
+		fileupload.init(onFileUpload);
 
 	  $(function() {
 	  	input = $('#input');
@@ -23,12 +23,10 @@ require(['jquery', 'frosty', 'fileupload'], function ($, frosty, fileupload) {
 
 			// Enter
 			input.keypress(function(event) {
-				var key = event.which;
-				if (key == 13 ) {
+				if (event.which == 13) {
 		    	event.preventDefault();
 		    	command = this.value;
 		    	prompt = $(this).parent();
-		    	console.log(fileupload);
 		    	frosty.process(this.value, callback);
 	   		}
 			});
@@ -37,12 +35,10 @@ require(['jquery', 'frosty', 'fileupload'], function ($, frosty, fileupload) {
 			input.keydown(function(event) {
 				if(event.which == 38) {
 	   			event.preventDefault();
-	   			var command = frosty.prev();
-	   			input.val(command);
+	   			input.val(frosty.prev());
 	   		} else if(event.which == 40) {
 	   			event.preventDefault();
-	   			var command = frosty.next();
-	   			input.val(command);
+	   			input.val(frosty.next());
 	   		}
 			})
 		});
@@ -67,9 +63,9 @@ require(['jquery', 'frosty', 'fileupload'], function ($, frosty, fileupload) {
 			input.focus();
 		}
 
-		function onupload(files) {
+		function onFileUpload(files) {
 			if(files) {
-				console.log(files);
+				frosty.files = files;
 				var input = $('#input');
 				input.val(input.val() + files[0].name);
 			}

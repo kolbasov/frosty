@@ -53,12 +53,13 @@ define(['jquery', 'fileupload'], function($, fileupload) {
 		* Uploads a file.
 		*/
 		put: function(path, callback) {
-			if(this.frosty.fileupload.files.length == 0) {
+			console.log(this.frosty);
+			if(this.frosty.files.length == 0) {
 				callback();
 				return;
 			}
 
-			var file = this.frosty.fileupload.files[0];
+			var file = this.frosty.files[0];
 			var form = new FormData();
 			form.append('path', encodeURI(path));
 			form.append(encodeURI(path), file);
