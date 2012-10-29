@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+../node_modules/forever/bin/forever \
+	--sourceDir .. \
+	-a \
+	-l /var/log/frosty/frosty.log \
+	-o /var/log/frosty/out.log \
+	-e /var/log/frosty/error.log \
+	start app.js
